@@ -16,21 +16,23 @@
     <link rel="stylesheet" href="styles/style2.css" id="defaultstyle">
 </head>
 <body>
-    <div class="content">
-        <canvas id="canvas"></canvas>  
-        <p class="warningText" id="warningText">Выберите демотиватор для продолженяи работы</p>
-        <img src="styles/icons/back.svg" class="backButton" onclick="backButton();">
-        <img src="styles/icons/save.svg" class="saveButton" onclick="tunelSaveButton();">
-
-        <div class="tunelList">
-            <div class="list" id="list">
-
+    <div class="content__fixed">
+        <div class="content">
+            <canvas id="canvas"></canvas>  
+            <p class="warningText" id="warningText">Выберите демотиватор для продолженяи работы</p>
+            <img src="styles/icons/back.svg" class="backButton" onclick="backButton();">
+            <img src="styles/icons/save.svg" class="saveButton" onclick="tunelSaveButton();">
+    
+            <div class="tunelList">
+                <div class="list" id="list">
+    
+                </div>
+                <div class="addButton" onclick="createOneDemotivator()">
+                    <img src="styles/icons/add.svg">
+                </div>
             </div>
-            <div class="addButton" onclick="createOneDemotivator()">
-                <img src="styles/icons/add.svg">
-            </div>
+    
         </div>
-
     </div>
 
     <div class="menu">
