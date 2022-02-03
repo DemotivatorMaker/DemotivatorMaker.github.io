@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Создатель демотиваторов - Обычный демотиватор</title>
+    <link rel="stylesheet" href="styles/style2.css" id="defaultstyle">
+</head>
+<body>
+    <div class="content">
+        <canvas id="canvas"></canvas>  
+        <img src="styles/icons/back.svg" class="backButton" onclick="backButton();">
+        <img src="styles/icons/save.svg" class="saveButton" onclick="saveDemotivator();">
+    </div>
+
+    <div class="menu">
+        <div class="page">
+            <h3>Настройки</h3>
+            <h4>Основное</h4>
+            <button class="imageSelector" onclick="selectImage()">Выбрать картинку
+                <label id="selectedImgText">Картинка не выбрана</label>
+                <input type="file" name="imageSelect" id="imageSelected" accept="image/*">
+            </button>
+            <input type="text" class="input" id="topText" placeholder="Верхний текст">
+            <input type="text" class="input" id="bottomText" placeholder="Нижний текст">
+            <h4>Стиль</h4>
+            <div class="colorSelector" onclick="colorpickerOne()">
+                <a class="text">Цвет демотиватора</a>
+                <div class="color" id="colorOne">
+                    <input type="color" class="color0" id="color1" value="#000000">
+                </div>
+            </div>
+            <div class="colorSelector" onclick="colorpickerTwo()">
+                <a class="text">Второй цвет</a>
+                <div class="color" id="colorTwo">
+                    <input type="color" class="color0" id="color2" value="#FFFFFF">
+                </div>
+            </div>
+            <div class="rightInputer" onclick="rTopText()">
+                <a class="text">Размер верхнего текста</a>
+                <div class="value">
+                    <input type="number" id="sizeTop" class="value__editor" value="28"><a>px</a>
+                </div>
+            </div>
+            <div class="rightInputer" onclick="rBottomText()">
+                <a class="text">Размер нижнего текста</a>
+                <div class="value">
+                    <input type="number" id="sizeBottom" class="value__editor" value="20"><a>px</a>
+                </div>
+            </div>
+            <h4>Позиционирование и размеры</h4>
+            <p>Размер демотиватора</p>
+            <div class="sizeBox">
+                <input type="number" class="input" id="sizeW" placeholder="Длина" value="512">
+                <input type="number" class="input" id="sizeH" placeholder="Ширина" value="512">
+            </div>
+            <!-- <h4>Конфигурация</h4>
+            <button class="button" onclick="copyConf()">Скопировать конфигурацию демотиватора</button>
+            <button class="button" onclick="setConf()">Вставить конфигурацию демотиватора</button>
+            <button class="button" onclick="defaultSettings()">Стандартные настройки</button> -->
+        </div>
+    </div>
+    
+    <script src="scripts/demotivatorCore.js"></script>
+    <script src="scripts/interfaceEventer.js"></script>
+    <script src="scripts/editorDefault.js"></script>
+    <img id="demImage" src="">
+    <script src="scripts/mobileCheck.js"></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+body{
+    background-color: #c96666;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    position: absolute;
+    background-color: #2E2E2E;
+    color: white;
+    overflow-block: auto;
+    top: 40vh;
+    width: 100vw;
+
+    z-index: -99;
+}
+
+.menu::-webkit-scrollbar {
+    visibility: hidden;
+    width: 0px;
+}
+
+.content{
+    position: relative;
+    height: 40vh;
+    background-color: #1E1E1E;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__fixed{
+    position: fixed;
+    width: 100%;
+}
+
+.page{
+    padding: 30px;
+    overflow: visible;
+}
+
+.input{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+
+    transition: all 400ms ease-in-out;
+}
+
+.input:hover{
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.colorSelector{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+
+    transition: all 400ms ease-in-out;
+}
+
+.colorSelector:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+
+.colorSelector .text{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 9px;
+}
+
+.colorSelector .color{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    top: 2px;
+    background-color: black;
+    float: right;
+}
+
+.rightInputer{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+
+    transition: all 400ms ease-in-out;
+}
+
+.rightInputer:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.rightInputer .text{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    top: 9px;
+}
+
+.rightInputer .value{
+    position: relative;
+    float: right;
+    top: 9px;
+}
+
+.value__editor{
+    text-align: end;
+    outline: 0;
+    border: 0;
+    width: 40px;
+    background-color: transparent;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.sizeBox{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.imageSelector{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    padding: 0;
+
+    transition: all 400ms ease-in-out;
+}
+
+.imageSelector:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.imageSelector label{
+    float: right;
+    color: rgba(250, 235, 215, 0.2);
+}
+
+.button{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 7px;
+    font-family: 'Roboto', sans-serif;
+    text-align: start;
+    padding: 0;
+
+    transition: all 400ms ease-in-out;
+}
+
+.button:hover{
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.saveButton{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+}
+
+.backButton{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    width: 32px;
+    height: 32px;
+
+    cursor: pointer;
+}
+
+/* ===== */
+
+.tunelList{
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #3A3A3A;
+    height: 56px;
+
+    position: fixed;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    bottom: 0px;
+
+    padding-right: 4px;
+    padding-left: 4px;
+    gap: 4;
+}
+
+.tunelList .list{
+    position: relative;
+
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-behavior: smooth;
+}
+
+.list::-webkit-scrollbar {
+    height: 3px;
+    border-radius: 100px;
+    background-color: #fdfdfd00;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background-color: #ffffff00;
+}
+
+.list:hover::-webkit-scrollbar-thumb {
+    background-color: #ffffff65;
+}
+
+.list .item{
+    min-width: 46px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 4px;
+
+    transition: all 200ms ease-in-out;
+}
+
+.list .item__selected{
+    outline: solid;
+    outline-offset: -1px;
+    outline-width: 1px;
+}
+
+
+.list .item:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.addButton{
+    width: 46px;
+    height: 46px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 200ms ease-in-out;
+}
+
+.addButton:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+h3{
+    font-size: 38px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 14px;
+}
+
+h4{
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.warningText{
+    position: absolute;
+    color: rgb(255, 255, 255);
+    display: none;
+}
+
+/* === */
+#demImage{
+    display: none;
+}
+
+.color0{
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+#canvas{
+    min-width: 200px;
+    min-height: 200px;
+
+    max-width: 250px;
+    max-height: 250px;
+}
+
+#imageSelected{
+    display: none;
+}

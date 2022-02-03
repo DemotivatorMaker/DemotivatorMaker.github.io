@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Создатель демотиваторов</title>
+    <link rel="stylesheet" href="styles/style.css" id="defaultstyle">
+</head>
+<body>
+
+    <!-- <div class="fadeOut animate__animated animate__fadeOut"></div> -->
+    <div class="page__menu">
+        <div class="content">
+            <h1>Создатель демотиваторов</h1>
+            <div class="items">
+                <div class="item" onclick="createDemotivator()">
+                    <img class="item_img" src="styles/icons/def.png">
+                    <p>Обычный демотиватор</p>
+                </div>
+                <div class="item" onclick="createTunel()">
+                    <img class="item_img" src="styles/icons/tun.png">
+                    <p>Тунельный демотиватор</p>
+                </div>
+            </div>
+            <div class="contacts">
+                <a onclick="projectInfo()">О проекте</a>
+                <a onclick="Donate()">Поддержать проект</a>
+                <a onclick="Social()">Проект в социальных сетях</a>
+                <a onclick="AndroidApp()">Приложение для Android</a>
+                <a onclick="WindowsApp()">Приложение для Windows</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/mobileCheck.js"></script>
+</body>
+</html>
