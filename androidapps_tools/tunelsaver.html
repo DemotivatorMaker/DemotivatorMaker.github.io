@@ -11,10 +11,7 @@
 
     let path = window.location.hash.substr(1);
     
-    s = path.replace(/^\s+|\s+$/g, "");
-    s = s.replace(/[\u0000-\u0019]+/g,""); 
-    
-    let demotivators = s;
+    let demotivators = path;
 
     var zip = new JSZip();
     var img = zip.folder("Демотиваторы");
