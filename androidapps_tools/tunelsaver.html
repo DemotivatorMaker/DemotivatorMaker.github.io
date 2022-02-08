@@ -9,7 +9,7 @@
 
 <script>
 
-    let path = encodeURI(window.location.hash).substr(1);
+    let path = decodeURI(window.location.hash).substr(1);
     
     let demotivators = path;
 
