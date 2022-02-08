@@ -12,7 +12,7 @@
     let path = window.location.hash.substr(1);
     
     let demotivators = path;
-    console.log(demotivators);
+    console.log(demotivators[0].replace(/^data:image\/(png|jpg);base64,/, "").replace("%22", "\""));
 
     var zip = new JSZip();
     var img = zip.folder("Демотиваторы");
