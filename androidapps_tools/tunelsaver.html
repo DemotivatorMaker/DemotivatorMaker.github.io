@@ -1,0 +1,28 @@
+<style>
+    body{
+        background-color: #2e2e2e;
+    }
+</style>
+
+<script>
+
+    let path = window.location.hash.substr(1);
+    
+    let demotivators = JSON.parse(path);
+
+    var zip = new JSZip();
+    var img = zip.folder("Демотиваторы");
+    
+    for (let i = 0; i < demotivators.length; i++) {
+        img.file("Демотиватор_"+i+".png", demotivators[i], {base64: true});
+    }
+
+    zip.generateAsync({type:"blob"})
+    .then(function(content) {
+        saveAs(content, "Демотиваторы.zip");
+        setInterval(() => {
+            window.close();
+        }, 1000);
+    });
+
+</script>
