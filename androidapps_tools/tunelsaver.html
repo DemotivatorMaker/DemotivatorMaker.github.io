@@ -17,7 +17,7 @@
     var img = zip.folder("Демотиваторы");
     
     for (let i = 0; i < demotivators.length; i++) {
-        img.file("Демотиватор_"+i+".png", demotivators[i].replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
+        img.file("Демотиватор_"+i+".png", demotivators[i], {base64: true});
     }
 
     zip.generateAsync({type:"blob"})
