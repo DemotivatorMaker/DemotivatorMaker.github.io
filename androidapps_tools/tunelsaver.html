@@ -9,16 +9,15 @@
 
 <script>
 
-    let path = window.location.hash.substr(1);
+    let path = encodeURI(window.location.hash).substr(1);
     
     let demotivators = path;
-    console.log(demotivators[0].replace(/^data:image\/(png|jpg);base64,/, "").replace("%22", "\""));
 
     var zip = new JSZip();
     var img = zip.folder("Демотиваторы");
     
     for (let i = 0; i < demotivators.length; i++) {
-        img.file("Демотиватор_"+i+".png", demotivators[i].replace(/^data:image\/(png|jpg);base64,/, "").replace("%22", "\""), {base64: true});
+        img.file("Демотиватор_"+i+".png", demotivators[i].replace(/^data:image\/(png|jpg);base64,/, ""), {base64: true});
     }
 
     zip.generateAsync({type:"blob"})
