@@ -45,12 +45,20 @@ function reDraw(){
     ctx.drawImage(demImage, offset+5, offset+5, widthSize-10, heightSize-10);
 
     ctx.fillStyle = color2;
-    ctx.textAlign = "center";
-    ctx.font = selectedCanvas.textTopSize+"px "+selectedCanvas.fontText;
-    ctx.fillText(selectedCanvas.textTop, topTextW, topTextH + 10);
+        ctx.textAlign = "center";
+        ctx.font = selectedCanvas.textTopSize+"px "+selectedCanvas.fontText;
+    if(selectedCanvas.textBottom != ""){
+        ctx.fillText(selectedCanvas.textTop, topTextW, topTextH + 10);
+    } else{
+        ctx.fillText(selectedCanvas.textTop, topTextW, topTextH + 25);
+    }
 
     ctx.font = selectedCanvas.textBottomSize+"px "+selectedCanvas.fontText;
-    ctx.fillText(selectedCanvas.textBottom, topTextW, topTextH + 40);
+    if(selectedCanvas.textTop != ""){
+        ctx.fillText(selectedCanvas.textBottom, topTextW, topTextH + 40); 
+    } else {
+        ctx.fillText(selectedCanvas.textBottom, topTextW, topTextH + 25); 
+    }
 }
 
 function getItemDem(num) {
