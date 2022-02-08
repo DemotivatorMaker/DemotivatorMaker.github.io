@@ -1,0 +1,22 @@
+<style>
+    body{
+        background-color: #2e2e2e;
+    }
+</style>
+
+<script>
+
+    let path = window.location.hash.substr(1);
+    console.log(path);
+
+    const link = document.createElement('a');
+    link.download = 'Демотиватор.png';
+    link.href = path
+    link.click();
+    link.delete;
+
+    setInterval(() => {
+        window.close();
+    }, 1000);
+
+</script>
