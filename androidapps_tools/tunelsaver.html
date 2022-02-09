@@ -11,7 +11,7 @@
 
     let path = decodeURI(window.location.hash).substr(1);
     
-    let demotivators = path;
+    let demotivators = JSON.parse(path);;
 
     var zip = new JSZip();
     var img = zip.folder("Демотиваторы");
