@@ -10,10 +10,16 @@
     console.log(path);
 
     const link = document.createElement('a');
-    link.download = 'Демотиватор.png';
+    link.download = 'Демотиватор'+getRandomInt(0,100000)+'.png';
     link.href = path
     link.click();
     link.delete;
+    
+    function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
 
     setInterval(() => {
         window.close();
