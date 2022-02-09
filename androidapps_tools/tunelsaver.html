@@ -22,10 +22,16 @@
 
     zip.generateAsync({type:"blob"})
     .then(function(content) {
-        saveAs(content, "Демотиваторы.zip");
+        saveAs(content, "Демотиваторы"+getRandomInt(0,100000)+".zip");
         setInterval(() => {
             window.close();
         }, 1000);
     });
+    
+    function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+}
 
 </script>
