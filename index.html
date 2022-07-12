@@ -15,6 +15,8 @@
 	<meta name="author" content="ShizzaHo">
 	<meta name="robots" content="index, defaultdemotivator, tuneldemotivator">
 
+    <link rel="manifest" href="/manifest.json">
+
     <link rel="stylesheet" href="styles/style.css" id="defaultstyle">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TYCGGGGBEZ"></script>
@@ -54,5 +56,26 @@
 
     <script src="scripts/main.js"></script>
     <script src="scripts/mobileCheck.js">checkDevice()</script>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                         Базовая реализация PWA                          -->
+    <!-- ----------------------------------------------------------------------- -->
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+              }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+              }).catch(function(err) {
+                console.log(err)
+              });
+            });
+          } else {
+            console.log('service worker is not supported');
+          }
+    </script>
+
 </body>
 </html>
